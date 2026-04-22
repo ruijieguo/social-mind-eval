@@ -1,0 +1,33 @@
+dimension_legend:
+  "1": 社会语境构型
+  "2": 多主体心智建模
+  "3": 社会机制理解
+  "4": 社会动态推演
+  "5": 规范与价值裁决
+  "6": 社会回应生成
+
+task_types:
+  T1:
+    name_zh: 隐状态识别任务
+    name_en: latent-state identification
+    best_for: ["1", "2"]
+  T2:
+    name_zh: 对照更新任务
+    name_en: contrastive update
+    best_for: ["1", "2", "3", "4"]
+  T3:
+    name_zh: 干预 rollout 任务
+    name_en: intervention rollout
+    best_for: ["3", "4"]
+  T4:
+    name_zh: 规范裁决任务
+    name_en: normative judgment
+    best_for: ["5"]
+  T5:
+    name_zh: 开放回应任务
+    name_en: open response generation
+    best_for: ["6"]
+  T6:
+    name_zh: 长程一致性任务
+    name_en: long-horizon consistency
+    best_for: ["2", "4", "6"]

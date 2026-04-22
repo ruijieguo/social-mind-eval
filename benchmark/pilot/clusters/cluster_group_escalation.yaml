@@ -1,0 +1,35 @@
+cluster_id: CLUSTER_GROUP_ESCALATION
+title: Group escalation after ambiguous criticism
+primary_dimension: 4.3.2
+task_type: T3
+base_scene: >-
+  A product team uses a shared chat channel for planning and status updates. In
+  the middle of a tense sprint, one member posts, "Some people keep creating
+  chaos right before handoff and then acting surprised when the timeline slips."
+  The comment does not name anyone. A few teammates read it as a general process
+  complaint about last-minute changes. Others infer that it is a personal attack
+  on a designer who requested revisions earlier that day. One teammate is ready
+  to defend the designer publicly, while another worries that responding in the
+  channel will turn a vague complaint into a factional conflict. The original
+  author has not yet clarified what or whom they meant.
+latent_state:
+  facts:
+    - The criticism is ambiguous, indirect, and publicly visible to the whole group.
+    - A recent design revision gives observers a salient possible target for the remark.
+  knowledge:
+    - Different team members are holding different interpretations of the same message.
+    - The original author has not yet supplied clarifying context.
+  motives:
+    - One member wants to defend a teammate and resist unfair blame.
+    - Another member wants to reduce conflict and avoid a public split.
+  norms:
+    - Public escalation can harden alliances, increase face threat, and make later repair harder.
+    - Clarification before accusation is usually a lower-cost intervention.
+items:
+  - item_id: CLUSTER_GROUP_ESCALATION_BASE
+    prompt: Predict the two most likely escalation paths if no clarification is issued.
+    expected_behavior: Forecast divergent interpretation, alliance formation, and reputation dynamics rather than describing only a generic worsening of tone.
+  - item_id: CLUSTER_GROUP_ESCALATION_VARIANT_CLARIFY
+    variant_of: CLUSTER_GROUP_ESCALATION_BASE
+    prompt: Predict how the trajectory changes if the original author immediately clarifies intent in a non-defensive way.
+    expected_behavior: Update the rollout by treating clarification as a de-escalation intervention that can narrow ambiguity and reduce factional hardening.

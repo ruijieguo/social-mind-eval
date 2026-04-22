@@ -1,0 +1,457 @@
+version: 1.0
+name: social-mind-eval-taxonomy
+description: Full machine-readable taxonomy aligned with the approved social-mind evaluation spec.
+dimensions:
+  - id: "1"
+    name: 社会语境构型
+    core_question: 这是什么局
+    subdimensions:
+      - id: "1.1"
+        name: 情境类型与互动阶段识别
+        task_family: T1
+        capabilities:
+          - id: "1.1.1"
+            name: 场景类型识别
+          - id: "1.1.2"
+            name: 互动阶段定位
+          - id: "1.1.3"
+            name: 情境切换识别
+      - id: "1.2"
+        name: 角色关系与权力结构解析
+        task_family: T1
+        capabilities:
+          - id: "1.2.1"
+            name: 角色关系识别
+          - id: "1.2.2"
+            name: 权力不对称识别
+          - id: "1.2.3"
+            name: 制度角色与非正式角色区分
+          - id: "1.2.4"
+            name: 受众结构识别
+      - id: "1.3"
+        name: 公开性、受众与边界条件识别
+        task_family: T2
+        capabilities:
+          - id: "1.3.1"
+            name: 公开/私密边界识别
+          - id: "1.3.2"
+            name: 第三方在场效应识别
+          - id: "1.3.3"
+            name: 声誉暴露面识别
+      - id: "1.4"
+        name: 语用锚点与表层偏离识别
+        task_family: T1
+        capabilities:
+          - id: "1.4.1"
+            name: 反语与字面偏离识别
+          - id: "1.4.2"
+            name: 间接言语行为识别
+          - id: "1.4.3"
+            name: 对话预设识别
+          - id: "1.4.4"
+            name: 隐含前提识别
+      - id: "1.5"
+        name: 事实约束与制度语境锚定
+        task_family: T1
+        capabilities:
+          - id: "1.5.1"
+            name: 关键事实链抽取
+          - id: "1.5.2"
+            name: 时序因果锚定
+          - id: "1.5.3"
+            name: 制度规则生效条件识别
+          - id: "1.5.4"
+            name: 形式规则与非正式惯例区分
+
+  - id: "2"
+    name: 多主体心智建模
+    core_question: 局里每个人各自怎么想
+    subdimensions:
+      - id: "2.1"
+        name: 认知状态与知识边界建模
+        task_family: T1
+        capabilities:
+          - id: "2.1.1"
+            name: 信念归因推断
+          - id: "2.1.2"
+            name: 知识状态区分
+          - id: "2.1.3"
+            name: 一阶错误信念推理
+          - id: "2.1.4"
+            name: 二阶及多阶心智归因
+          - id: "2.1.5"
+            name: 双向心智状态追踪
+          - id: "2.1.6"
+            name: 共同知识与非共同知识区分
+      - id: "2.2"
+        name: 意图、动机与目标结构建模
+        task_family: T1
+        capabilities:
+          - id: "2.2.1"
+            name: 即时行动意图识别
+          - id: "2.2.2"
+            name: 深层动机溯因
+          - id: "2.2.3"
+            name: 显性目标与隐性目标区分
+          - id: "2.2.4"
+            name: 多层意图层级解析
+          - id: "2.2.5"
+            name: 意图-行为一致性判断
+      - id: "2.3"
+        name: 情绪、情感与立场建模
+        task_family: T1
+        capabilities:
+          - id: "2.3.1"
+            name: 基本情绪识别
+          - id: "2.3.2"
+            name: 复合情绪解析
+          - id: "2.3.3"
+            name: 隐性情绪推断
+          - id: "2.3.4"
+            name: 情绪调节策略理解
+          - id: "2.3.5"
+            name: 立场强度判断
+          - id: "2.3.6"
+            name: 认知共情推断
+      - id: "2.4"
+        name: 信任、承诺与真实性建模
+        task_family: T1
+        capabilities:
+          - id: "2.4.1"
+            name: 信任形成条件判断
+          - id: "2.4.2"
+            name: 承诺状态识别
+          - id: "2.4.3"
+            name: 可信度评估
+          - id: "2.4.4"
+            name: 欺骗意图识别
+          - id: "2.4.5"
+            name: 谎言检测推理
+          - id: "2.4.6"
+            name: 自欺与策略性模糊区分
+      - id: "2.5"
+        name: 偏好、人格与元认知建模
+        task_family: T1
+        capabilities:
+          - id: "2.5.1"
+            name: 人格特质推断
+          - id: "2.5.2"
+            name: 价值观偏好识别
+          - id: "2.5.3"
+            name: 情境化行为风格预测
+          - id: "2.5.4"
+            name: 认知边界感知
+          - id: "2.5.5"
+            name: 信念确定性元判断
+          - id: "2.5.6"
+            name: 认知策略选择推理
+
+  - id: "3"
+    name: 社会机制理解
+    core_question: 为什么会这样
+    subdimensions:
+      - id: "3.1"
+        name: 面子、礼貌与印象管理机制
+        task_family: T2
+        capabilities:
+          - id: "3.1.1"
+            name: 面子威胁识别
+          - id: "3.1.2"
+            name: 面子维护策略识别
+          - id: "3.1.3"
+            name: 公开纠正与私下提醒机制差异
+          - id: "3.1.4"
+            name: 印象管理动机识别
+      - id: "3.2"
+        name: 责任归因与解释机制
+        task_family: T1
+        capabilities:
+          - id: "3.2.1"
+            name: 冲突责任定位
+          - id: "3.2.2"
+            name: 能力归因与动机归因区分
+          - id: "3.2.3"
+            name: 稳定归因与情境归因区分
+          - id: "3.2.4"
+            name: 多因素归因整合
+      - id: "3.3"
+        name: 信任、操纵与博弈机制
+        task_family: T1
+        capabilities:
+          - id: "3.3.1"
+            name: 信任破坏机制识别
+          - id: "3.3.2"
+            name: 操纵策略识别
+          - id: "3.3.3"
+            name: 施压与胁迫机制识别
+          - id: "3.3.4"
+            name: 信息控制与议程控制识别
+      - id: "3.4"
+        name: 身份、角色与规范激活机制
+        task_family: T1
+        capabilities:
+          - id: "3.4.1"
+            name: 社会角色期望推断
+          - id: "3.4.2"
+            name: 身份标签与行为关联
+          - id: "3.4.3"
+            name: 身份威胁机制识别
+          - id: "3.4.4"
+            name: 角色冲突机制理解
+          - id: "3.4.5"
+            name: 规范激活条件识别
+      - id: "3.5"
+        name: 群体影响与结构约束机制
+        task_family: T1
+        capabilities:
+          - id: "3.5.1"
+            name: 从众压力判断
+          - id: "3.5.2"
+            name: 群体极化机制推理
+          - id: "3.5.3"
+            name: 旁观者效应识别
+          - id: "3.5.4"
+            name: 社会比较效应建模
+          - id: "3.5.5"
+            name: 结构约束下的策略选择理解
+          - id: "3.5.6"
+            name: 个体能动性与规范抵抗识别
+      - id: "3.6"
+        name: 联盟、边界与群体关系机制
+        task_family: T1
+        capabilities:
+          - id: "3.6.1"
+            name: 内群体/外群体区分
+          - id: "3.6.2"
+            name: 群体成员资格判定
+          - id: "3.6.3"
+            name: 边界模糊性处理
+          - id: "3.6.4"
+            name: 合作动机识别
+          - id: "3.6.5"
+            name: 联盟稳定性判断
+
+  - id: "4"
+    name: 社会动态推演
+    core_question: 接下来会怎样
+    subdimensions:
+      - id: "4.1"
+        name: 社会状态更新与时序演化
+        task_family: T2
+        capabilities:
+          - id: "4.1.1"
+            name: 新信息引入后的信念更新
+          - id: "4.1.2"
+            name: 身份与立场动态变化
+          - id: "4.1.3"
+            name: 关系状态变化追踪
+          - id: "4.1.4"
+            name: 互动窗口与时机判断
+      - id: "4.2"
+        name: 对话与协商路径推演
+        task_family: T3
+        capabilities:
+          - id: "4.2.1"
+            name: 分歧识别与定位
+          - id: "4.2.2"
+            name: 协商策略预测
+          - id: "4.2.3"
+            name: 共识形成路径推理
+          - id: "4.2.4"
+            name: 谈判破裂条件预测
+          - id: "4.2.5"
+            name: 修复窗口识别
+      - id: "4.3"
+        name: 冲突、升级与去升级推演
+        task_family: T3
+        capabilities:
+          - id: "4.3.1"
+            name: 冲突诱因识别
+          - id: "4.3.2"
+            name: 冲突升级路径预测
+          - id: "4.3.3"
+            name: 去升级窗口识别
+          - id: "4.3.4"
+            name: 去升级策略后果推演
+          - id: "4.3.5"
+            name: 零和/非零和演化区分
+      - id: "4.4"
+        name: 群体与制度动态推演
+        task_family: T3
+        capabilities:
+          - id: "4.4.1"
+            name: 声誉扩散路径预测
+          - id: "4.4.2"
+            name: 群体站队形成推演
+          - id: "4.4.3"
+            name: 集体行动困境推理
+          - id: "4.4.4"
+            name: 合作破裂预测
+          - id: "4.4.5"
+            name: 制度反馈对个体互动的影响推演
+      - id: "4.5"
+        name: 因果、干预与反事实推演
+        task_family: T3
+        capabilities:
+          - id: "4.5.1"
+            name: 社会因果链识别
+          - id: "4.5.2"
+            name: 伪相关与真因果区分
+          - id: "4.5.3"
+            name: 多因素因果归因
+          - id: "4.5.4"
+            name: 溯因推理
+          - id: "4.5.5"
+            name: 单变量反事实推断
+          - id: "4.5.6"
+            name: 多变量联合反事实推理
+          - id: "4.5.7"
+            name: 干预杠杆点识别
+          - id: "4.5.8"
+            name: 干预副作用预测
+
+  - id: "5"
+    name: 规范与价值裁决
+    core_question: 应该怎样
+    subdimensions:
+      - id: "5.1"
+        name: 规范识别与违背判断
+        task_family: T4
+        capabilities:
+          - id: "5.1.1"
+            name: 社会规范识别
+          - id: "5.1.2"
+            name: 规范违背检测与判断
+          - id: "5.1.3"
+            name: 规范严重程度分级
+          - id: "5.1.4"
+            name: 道德/礼仪/法律规范区分
+          - id: "5.1.5"
+            name: 形式规则与关系规范冲突判断
+      - id: "5.2"
+        name: 公平、责任与程序正义裁决
+        task_family: T4
+        capabilities:
+          - id: "5.2.1"
+            name: 责任分配判断
+          - id: "5.2.2"
+            name: 程序正义评估
+          - id: "5.2.3"
+            name: 互动正义评估
+          - id: "5.2.4"
+            name: 结果公平与过程公平折中
+          - id: "5.2.5"
+            name: 问责边界判断
+      - id: "5.3"
+        name: 诚实、忠诚与伤害控制裁决
+        task_family: T4
+        capabilities:
+          - id: "5.3.1"
+            name: 真实性边界判断
+          - id: "5.3.2"
+            name: 善意隐瞒与不当欺骗区分
+          - id: "5.3.3"
+            name: 忠诚与公平冲突裁决
+          - id: "5.3.4"
+            name: 关系保护与事实纠正折中
+          - id: "5.3.5"
+            name: 最小伤害路径选择
+      - id: "5.4"
+        name: 权力、尊重与体面边界裁决
+        task_family: T4
+        capabilities:
+          - id: "5.4.1"
+            name: 权力不对称下的正当性判断
+          - id: "5.4.2"
+            name: 面子保护与公共利益冲突裁决
+          - id: "5.4.3"
+            name: 公开羞辱与正当纠偏区分
+          - id: "5.4.4"
+            name: 边界侵犯与必要干预区分
+      - id: "5.5"
+        name: 多元规范与跨文化裁决
+        task_family: T4
+        capabilities:
+          - id: "5.5.1"
+            name: 跨文化规范迁移判断
+          - id: "5.5.2"
+            name: 规范分歧定位
+          - id: "5.5.3"
+            name: 跨群体规范谈判可接受性判断
+          - id: "5.5.4"
+            name: 新规范形成的正当性评估
+
+  - id: "6"
+    name: 社会回应生成
+    core_question: 具体怎么说
+    subdimensions:
+      - id: "6.1"
+        name: 受众适配与表达调节
+        task_family: T5
+        capabilities:
+          - id: "6.1.1"
+            name: 受众适配表达
+          - id: "6.1.2"
+            name: 立场强度调节
+          - id: "6.1.3"
+            name: 解释粒度调节
+          - id: "6.1.4"
+            name: 知识降维表达
+          - id: "6.1.5"
+            name: 语气与直接性控制
+      - id: "6.2"
+        name: 支持、确认与边界表达
+        task_family: T5
+        capabilities:
+          - id: "6.2.1"
+            name: 支持性回应生成
+          - id: "6.2.2"
+            name: 共情确认表达
+          - id: "6.2.3"
+            name: 不确定性表达
+          - id: "6.2.4"
+            name: 拒绝但维持关系的表达
+          - id: "6.2.5"
+            name: 设边界但不羞辱的表达
+      - id: "6.3"
+        name: 协商、说服与协调生成
+        task_family: T5
+        capabilities:
+          - id: "6.3.1"
+            name: 协商话术生成
+          - id: "6.3.2"
+            name: 替代方案生成
+          - id: "6.3.3"
+            name: 共同注意维持
+          - id: "6.3.4"
+            name: 共识推进表达
+          - id: "6.3.5"
+            name: 多方协调表达
+      - id: "6.4"
+        name: 冲突修复与信任重建生成
+        task_family: T5
+        capabilities:
+          - id: "6.4.1"
+            name: 道歉策略生成
+          - id: "6.4.2"
+            name: 澄清与纠偏表达
+          - id: "6.4.3"
+            name: 关系修复话术生成
+          - id: "6.4.4"
+            name: 信任重建路径表达
+          - id: "6.4.5"
+            name: 去升级回应生成
+      - id: "6.5"
+        name: 防御、纠偏与抗操纵生成
+        task_family: T5
+        capabilities:
+          - id: "6.5.1"
+            name: 错误前提纠正
+          - id: "6.5.2"
+            name: 谄媚抑制回应
+          - id: "6.5.3"
+            name: 操控防御回应
+          - id: "6.5.4"
+            name: 高风险请求替代性回应
+          - id: "6.5.5"
+            name: 制度与事实约束下的回应重构

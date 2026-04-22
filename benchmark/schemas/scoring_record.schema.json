@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "social-mind-benchmark/scoring-record.schema.json",
+  "title": "Scoring Record",
+  "description": "Schema for a scored model response on a benchmark item.",
+  "type": "object",
+  "required": ["item_id", "model_name", "scores"],
+  "properties": {
+    "item_id": {"type": "string"},
+    "model_name": {"type": "string"},
+    "scores": {
+      "type": "object",
+      "required": ["state_correctness", "normative_judgment", "response_quality"],
+      "properties": {
+        "state_correctness": {"type": "number", "enum": [0.0, 0.5, 1.0]},
+        "normative_judgment": {"type": "number", "enum": [0.0, 0.5, 1.0]},
+        "response_quality": {"type": "number", "enum": [0.0, 0.5, 1.0]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

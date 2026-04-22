@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "social-mind-benchmark/pilot-gold-labels.schema.json",
+  "title": "Pilot Gold Labels",
+  "description": "Schema for pilot benchmark gold-label records.",
+  "$defs": {
+    "string_list": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "label_record": {
+      "type": "object",
+      "required": ["item_id", "dimension", "task_type", "minimum_required_elements"],
+      "properties": {
+        "item_id": {"type": "string"},
+        "dimension": {"type": "string"},
+        "task_type": {"type": "string", "enum": ["T1", "T2", "T3", "T4", "T5", "T6"]},
+        "minimum_required_elements": {"$ref": "#/$defs/string_list"},
+        "state_targets": {"$ref": "#/$defs/string_list"},
+        "normative_targets": {"$ref": "#/$defs/string_list"},
+        "response_targets": {"$ref": "#/$defs/string_list"},
+        "rollout_targets": {"$ref": "#/$defs/string_list"},
+        "common_failure_mode": {"$ref": "#/$defs/string_list"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["labels"],
+  "properties": {
+    "labels": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/label_record"}
+    }
+  },
+  "additionalProperties": false
+}
